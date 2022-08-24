@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int max_of_four(int, int, int, int);
+
 int main()
 {
 	int a, b, c, d;
@@ -14,9 +16,19 @@ int main()
 
 int max_of_four(int a, int b, int c, int d)
 {
-	if ((a < b) && (a < c) && (a < d)) {
-		printf 
+	int Max;
+
+	if ((a > b) && (a > c) && (a > d)) {
+		Max = a;	
+	} else if((b > c) && (b > d)) {
+		Max = b;
+	} else if (c > d) {
+		Max = c;
+	} else {
+		Max = d;
 	}
+
+	return Max;
 }
 
 /*
