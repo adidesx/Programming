@@ -1,4 +1,14 @@
 cmake_minimum_required( VERSION 2.8.12 )
-project( prepareFilesystem )
+project( sbox )
 file( GLOB SRCS *.cpp *.h )
-add_executable( preparePersistency ${SRCS} )
+
+set(SANDBOXING_SOURCE
+    src/main.cpp
+    )
+
+
+include_directories(
+        include/
+)
+
+add_executable( sbox ${SANDBOXING_SOURCE} ${SRCS} )
